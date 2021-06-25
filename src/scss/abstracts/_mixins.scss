@@ -1,0 +1,74 @@
+@use "colors" as *;
+
+@mixin flex-column {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-vertical-center{
+    align-items: center;
+}
+
+@mixin flex-even{
+    > *{
+       flex-basis: 100%; 
+    }
+}
+
+@mixin grid-even{
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin notification-ball($size, $bg-color: transparent, $font-color){
+    @include flex-row;
+    @include flex-center;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    font-weight: bold;
+    @if $bg-color != transparent {
+        background: $bg-color;
+    }
+    border-radius: 50%;
+}
+
+@mixin square-button($width){
+    width: $width;
+    aspect-ratio: 1;
+    background-color: white;
+    outline: 1px solid $gray-300;
+    margin: 1px 1px 0 0;
+    line-height: $width;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: $gray-600;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    &:hover{
+        background-color: $blue-500;
+        color: $gray-100;
+        box-shadow: 0px 0px 10px 0px rgba(black, 0.5),  inset 0px 0px 10px 0px rgba($blue-300, 0.5);
+        z-index: 1;
+    }
+}

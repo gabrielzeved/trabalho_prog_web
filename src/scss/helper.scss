@@ -1,0 +1,58 @@
+@use "abstracts";
+@use "components/header.scss";
+@use "components/main.scss";
+@use "components/footer.scss";
+
+:root{
+    margin: 0;
+    padding: 0;
+    font-family: abstracts.$primary-font;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4{
+    margin: 0;
+}
+
+body{
+    background: white;
+}
+
+.flex-row{
+    @include abstracts.flex-row;
+}
+
+.flex-column{
+    @include abstracts.flex-column;
+}
+
+.flex-center{
+    @include abstracts.flex-center;
+}
+
+.flex-vertical-center{
+    @include abstracts.flex-vertical-center;
+}
+
+.flex-even{
+    @include abstracts.flex-even;
+}
+
+.grid-even{
+    @include abstracts.grid-even;
+}
+
+.grow{
+    flex: 1 1 auto;
+}

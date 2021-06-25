@@ -1,0 +1,42 @@
+@use "abstracts" as * ;
+
+footer{
+    grid-area: footer;
+    background-color: white;
+    outline: 1px solid $gray-300;
+    > div {
+        border-right: 1px solid $gray-300;
+        height: 100%;
+        
+        .left{
+            border-right: 1px solid $gray-300;
+            float:left;
+        }
+
+        .icon{
+            &:not(:first-child){
+                border-left: 1px solid $gray-300;
+            }
+            @include square-button(1.5rem);
+            outline: 0;
+            height:2.5rem;
+            width: 2.5rem;
+            aspect-ratio: 1;
+            text-align: center;
+            line-height: 2.5rem;
+            margin: 0;
+            >span{
+                height: 100%;
+                line-height: 2.5rem;
+            }
+        }
+
+        .right{
+            border-left: 1px solid $gray-300;
+            float: right;
+        }
+
+
+    }
+
+}

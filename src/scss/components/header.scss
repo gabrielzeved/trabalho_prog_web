@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+header{
+    background-color: $primary-500;
+    color: rgba(white, 0.7);
+    align-items: center;
+    height: 3.5rem;
+    z-index: 1;
+    position: relative;
+    .header-box{
+        
+        @include flex-row;
+        @include flex-center;
+
+        &:hover{
+            cursor: pointer;
+            color: white;
+        }
+
+        * + *{
+            margin-left: 5px;
+        }
+
+        h3, h4{
+            line-height: 1;
+            font-weight: 300;
+            font-size: 80%;
+        }
+
+        padding: $padding-default;
+        height: 100%;
+        
+        &:not(:last-child){
+            border-right: 1px solid $primary-600;
+        }
+    }
+
+    #header-title{
+        color: white;
+        font-size: 24px;
+        font-weight: 900;
+        span{
+            text-shadow: 0px 0px 50px rgba(black, 1);
+        }
+    }
+
+    line-height: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px rgba(black, .1);
+}

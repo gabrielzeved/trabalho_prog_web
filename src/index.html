@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/helper.scss">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <header class="flex-row">
+
+        <div class="header-box">
+            <span class="material-icons">search</span>
+        </div>
+        
+        <div class="header-box">
+            <span class="material-icons">menu</span>
+            
+            <div class="flex-column">
+                <h4>Select</h4>
+                <h3>Category</h3>
+            </div>
+
+        </div>
+
+        <div class="header-box grow" id="header-title">
+            <span>Frango Store</span>  
+        </div>
+
+        <div class="header-box">
+            <span class="material-icons-outlined">person</span>
+        </div>
+        <div class="header-box">
+            <span class="material-icons-outlined">favorite_border</span>
+        </div>
+
+        <div class="header-box">
+            <span class="material-icons-outlined">shopping_cart</span>
+        </div>
+
+    </header>
+
+    <section id="main" class="flex-column">
+    
+        <!--
+        <div id="main-header">
+            <div style="flex-basis: 66%">
+                oi
+            </div>
+            <div style="flex-basis: 34%">
+            
+            </div>
+        </div>
+        -->
+        
+        <div id="products-grid">
+            
+            <div id="main-filter" class="filter">
+                <div class="grow">
+                    <h2>
+                        Filter
+                    </h2>
+                </div>
+                
+                <div class="icon">
+                    <span class="material-icons-outlined">autorenew</span>
+                </div>
+            </div>
+
+            <div id="filter-header" class="grid-even">
+
+                <div class="filter">
+                    <div class="grow">
+                        <h3>Sort by: Price $ - $$</h3>
+                    </div>
+                    <div class="icon">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                    </div>
+                </div>
+
+                <div class="filter">
+                    <div class="grow">
+                        <h3>Show: G</h3>
+                    </div>
+                    
+                </div>
+
+                <div class="filter">
+                    <div class="icon">
+                        <span class="material-icons-outlined">apps</span>
+                    </div>
+                    <div class="icon">
+                        <span class="material-icons-outlined">format_list_bulleted</span>
+                    </div>
+                    <div class="grow flex-row flex-vertical-center">
+                        <h3>Compare:</h3>
+                        <div class="notify">
+                            3 
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="filter-column">
+                
+                <!--Categories Filter-->
+                <div class="filter-container">
+                    <div class="filter-title">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                        <h3>CATEGORIES</h3>
+                    </div>
+    
+                    <ul>
+                        <li class="selected">
+                            <p>Lifestyle</p>
+                            <span>1</span>
+                        </li>
+                        <li>
+                            <p>Running</p>
+                            <span>25</span>
+                        </li>
+                        <li>
+                            <p>Training & Gym</p>
+                            <span>45</span>
+                        </li>
+                        <li>
+                            <p>Basketball</p>
+                            <span>11</span>
+                        </li>
+                        <li>
+                            <p>Football</p>
+                            <span>16</span>
+                        </li>
+                        <li>
+                            <p>Soccer</p>
+                            <span>32</span>
+                        </li>
+                        <li>
+                            <p>Baseball</p>
+                            <span>5</span>
+                        </li>
+                        <li>
+                            <p>Golf</p>
+                            <span>18</span>
+                        </li>
+                        <li>
+                            <p>Snowboarding</p>
+                            <span>23</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Price Filter-->
+                <div class="filter-container">
+                    <div class="filter-title">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                        <h3>PRICE</h3>
+                    </div>
+                    
+                    <div class="slider">
+                        <div class="slider-content">
+                            <span>0</span>
+                            <input type="range" min="0" max="200" value="100" step="1" />
+                            <span>200</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Brand Filter-->
+                <div class="filter-container">
+                    <div class="filter-title">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                        <h3>BRAND</h3>
+                    </div>
+
+                    <ul>
+                        <li><label for="lifestyle-cb">Lifestyle</label><input type="checkbox" name="brand" id="lifestyle-cb"></li>
+                        <li><label for="running-cb">Running</label><input type="checkbox" name="brand" id="running-cb"></li>
+                        <li><label for="gym-cb">Training & Gym</label><input type="checkbox" name="brand" id="gym-cb"></li>
+                        <li><label for="basketball-cb">Basketball</label><input type="checkbox" name="brand" id="basketball-cb"></li>
+                    </ul>
+
+                </div>
+
+                <!--Color Filter-->
+                <div class="filter-container">
+                    <div class="filter-title">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                        <h3>COLORS</h3>
+                    </div>
+
+                    <ol class="colors-container">
+                        <li>
+                            <input type="checkbox" name="color" id="white" class="color-cb">
+                            <label for="white">
+                                <div class="color-circle white">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="gray" class="color-cb">
+                            <label for="gray">
+                                <div class="color-circle gray">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="yellow" class="color-cb">
+                            <label for="yellow">
+                                <div class="color-circle yellow">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="orange" class="color-cb">
+                            <label for="orange">
+                                <div class="color-circle orange">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="red" class="color-cb">
+                            <label for="red">
+                                <div class="color-circle red">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="purple" class="color-cb">
+                            <label for="purple">
+                                <div class="color-circle purple">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="blue" class="color-cb">
+                            <label for="blue">
+                                <div class="color-circle blue">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="light-blue" class="color-cb">
+                            <label for="light-blue">
+                                <div class="color-circle light-blue">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="green" class="color-cb">
+                            <label for="green">
+                                <div class="color-circle green">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="brown" class="color-cb">
+                            <label for="brown">
+                                <div class="color-circle brown">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="black" class="color-cb">
+                            <label for="black">
+                                <div class="color-circle black">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox" name="color" id="colorful" class="color-cb">
+                            <label for="colorful">
+                                <div class="color-circle colorful">
+                                    <span class="material-icons">done</span>
+                                </div>
+                            </label>
+                        </li>
+                    </ol>
+
+                </div>
+
+                <div class="filter-container">
+                    <div class="filter-title">
+                        <span class="material-icons-outlined">arrow_drop_down</span>
+                        <h3>SIZE</h3>
+                    </div>
+
+                    <ol class="sizes-container">
+                        <li><label for="size-4">4</label><input type="checkbox" name="size" id="size-4"></li>
+                        <li><label for="size-5">5</label><input type="checkbox" name="size" id="size-5"></li>
+                        <li><label for="size-6">6</label><input type="checkbox" name="size" id="size-6"></li>
+                        <li><label for="size-7">7</label><input type="checkbox" name="size" id="size-7"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                        <li><label for="size-8">8</label><input type="checkbox" name="size" id="size-8"></li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+            <div id="products">
+
+                <div class="products-container">
+                    <div class="product">
+
+                        <div class="product-container">
+                            <img src="res/shoes/1.png" />
+                            <div class="product-front">
+                                <div class="buy">
+                                    <span class="material-icons-outlined">shopping_bag</span>
+                                    Buy
+                                </div>
+
+                                <div class="icon" style="top: 45%; left: 60%;">
+                                    <span class="material-icons-outlined">content_copy</span>
+                                </div>
+    
+                                <div class="icon" style="top: 45%; left: 75%;">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
+
+                            </div>
+                                <h2>Yeezy Shoe</h2>
+                                <h3>$ 135.00</h3>
+                        </div>
+
+                    </div>
+                    <div class="product">
+
+                        <div class="product-container">
+                            <img src="res/shoes/2.png" />
+                            <div class="product-front">
+                                <div class="buy">
+                                    <span class="material-icons-outlined">shopping_bag</span>
+                                    Buy
+                                </div>
+
+                                <div class="icon" style="top: 45%; left: 60%;">
+                                    <span class="material-icons-outlined">content_copy</span>
+                                </div>
+    
+                                <div class="icon" style="top: 45%; left: 75%;">
+                                    <span class="material-icons-outlined">favorite_border</span>
+                                </div>
+
+                            </div>
+                            <div class="info">
+                                <h2>Yeezy Shoe</h2>
+                                <h3>$ 135.00</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                </div>
+
+            </div>
+
+            <footer class="grid-even">
+                <div>
+                    <div class="icon left">
+                        <span class="material-icons-outlined">chevron_left</span>
+                    </div>
+                </div>
+                
+                <div class="flex-row flex-even pagination">
+        
+                    <div class="icon">1</div>
+                    <div class="icon">2</div>
+                    <div class="icon">3</div>
+                    <div class="icon">4</div>
+                    <div class="icon">5</div>
+                    <div class="icon">...</div>
+                    <div class="icon">1</div>
+        
+                </div>
+                
+                <div>
+                    <div class="icon right">
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
